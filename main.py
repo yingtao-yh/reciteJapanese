@@ -7,7 +7,7 @@ import xlrd
 import pandas as pd
 import random
 import string
-NAME = 'Resource/nihongo_word.xls'
+NAME = 'Resource/23_02_22.xls'
 # NAME = 'Resource/english_word.xls'
 
 def recite_jp(NAME):
@@ -25,9 +25,10 @@ def recite_jp(NAME):
 
         cols_hirakana = sheet.col_values(0)
 
+        allWords = 20
         count = 0
         batu = []
-        list_n = random.sample(range(1, 2000), 100)
+        list_n = random.sample(range(1, 100), allWords)
 
         for n in range(len(list_n)):
 
@@ -41,7 +42,7 @@ def recite_jp(NAME):
                     print("错误, 正确答案为 "+str(cols_hirakana[list_n[n]]))
                     batu.append(list_n[n])
 
-        print("您的总得分为：" + str(count))
+        print("您的总得分为：" + str(count/allWords * 100))
 
         while len(batu) != 0:
             print("错题循环")
