@@ -7,8 +7,9 @@ import xlrd
 import pandas as pd
 import random
 import string
-NAME = 'Resource/23_02_22.xls'
+# NAME = 'Resource/23_02_22.xls'
 # NAME = 'Resource/english_word.xls'
+NAME = 'Resource/23_3_1.xls'
 
 def recite_jp(NAME):
 
@@ -25,10 +26,10 @@ def recite_jp(NAME):
 
         cols_hirakana = sheet.col_values(0)
 
-        allWords = 20
+        allWords = 40
         count = 0
         batu = []
-        list_n = random.sample(range(1, 100), allWords)
+        list_n = random.sample(range(1, 182), allWords)
 
         for n in range(len(list_n)):
 
